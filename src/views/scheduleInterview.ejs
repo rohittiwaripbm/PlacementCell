@@ -1,0 +1,26 @@
+<% useLayout = true; %>
+
+<div class="d-flex justify-content-center my-5" style="height: 70vh;">
+    <div style="width: 400px; padding: 20px; border: 1px solid #ccc; border-radius: 5px; background-color: #f9f9f9;">
+        <h2 style="text-align: center;">Schedule Interview</h2>
+        <form action="/a/scheduled" method="post">
+            <div class="mb-3">
+                <label for="studentId" class="form-label">Student</label>
+                <select class="form-control" name="studentId" id="studentId">
+                    <% students.forEach(student => { %>
+                        <option value="<%= student._id %>"><%= student.studentName %></option>
+                    <% }) %>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="companyName" class="form-label">Company name</label>
+                <input type="text" class="form-control" name="companyName" id="companyName" placeholder="Enter company name">
+            </div>
+            <div class="mb-3">
+                <label for="interviewDate" class="form-label">Interview Date</label>
+                <input type="date" class="form-control" name="InterviewDate" id="interviewDate" placeholder="Select interview date">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</div>

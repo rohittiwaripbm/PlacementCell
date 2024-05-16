@@ -1,0 +1,54 @@
+<% useLayout = false; %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invalid URL Page</title>
+    <style>
+	body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+}
+
+.animated-text {
+    font-size: 2rem;
+    color: #333;
+    animation: fadeIn 2s ease-in-out infinite alternate;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+	</style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="animated-text">Oops! Invalid URL</h1>
+        <p>The requested URL does not exist. Please check the URL and try again.</p>
+    </div>
+    <script>
+	// You can add any dynamic behavior here if needed
+// For example, redirecting users after a certain time
+setTimeout(() => {
+    window.location.href = '/'; // Redirect to homepage
+}, 5000); // Redirect after 5 seconds
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<% useLayout=true; %>
+<style>
+     body {
+      background-color: #f8f9fa;
+    }
+    .container {
+      max-width: 900px;
+      margin: 50px auto;
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    label {
+      font-weight: bold;
+    }
+</style>
+  <div class="container">
+    <h1 class="text-center mb-4">Add Student</h1>
+    <form method="post" action="/a/get">
+      <div class="form-group">
+        <label for="studentName">Name</label>
+        <input type="text" class="form-control" name="studentName" id="studentName">
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" class="form-control" name="studentEmail" id="email">
+      </div>
+      <div class="form-group">
+        <label for="mob">Mobile</label>
+        <input type="text" class="form-control" name="studentMob" id="mob">
+      </div>
+      <div class="form-group">
+        <label for="batch">Batch</label>
+        <input type="text" class="form-control" name="studentBatch" id="batch">
+      </div>
+      <div class="form-group">
+        <label for="college">College</label>
+        <input type="text" class="form-control" name="studentCollege" id="college">
+      </div>
+      <div class="form-group">
+        <label for="status">Placed Status</label>
+        <select class="form-control" name="studentStatus" id="status">
+          <option value="notPlaced">Not Placed</option>
+          <option value="placed">Placed</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="dsa">DSA Score</label>
+        <input type="text" class="form-control" name="dsaScore" id="dsa">
+      </div>
+      <div class="form-group">
+        <label for="webd">WEB Dev Score</label>
+        <input type="text" class="form-control" name="webDevScore" id="webd">
+      </div>
+      <div class="form-group">
+        <label for="react">React Score</label>
+        <input type="text" class="form-control" name="reactScore" id="react">
+      </div>
+      <div class="text-center mt-3">
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="reset" class="btn btn-secondary ml-3">Reset</button>
+      </div>
+    </form>
+  </div>

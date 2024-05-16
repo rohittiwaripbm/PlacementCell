@@ -1,0 +1,17 @@
+
+<% useLayout = true; %>
+
+<table border="1">
+    <thead>
+        <tr>
+            <th>Student Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% students.forEach(function(student) { %>
+            <tr>
+                <td><%= student %></td>
+            </tr>
+        <% }); %>
+    </tbody>
+</table>
